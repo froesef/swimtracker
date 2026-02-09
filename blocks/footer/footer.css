@@ -1,0 +1,26 @@
+footer {
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-border);
+  padding: var(--spacing-xl) 0;
+  margin-top: var(--spacing-xl);
+}
+
+footer .footer-wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+footer .footer-content {
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: var(--body-font-size-s);
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a:any-link {
+  color: var(--color-brand);
+}

@@ -1,0 +1,224 @@
+:root {
+  /* colors */
+  --color-brand: #0066cc;
+  --color-brand-dark: #0052a3;
+  --color-text: #333;
+  --color-text-light: #666;
+  --color-background: #f5f5f5;
+  --color-white: #fff;
+  --color-border: #eee;
+  --color-border-medium: #ddd;
+
+  /* occupancy level colors */
+  --color-level-0: #ccc;
+  --color-level-1: #4caf50;
+  --color-level-2: #8bc34a;
+  --color-level-3: #ff9800;
+  --color-level-4: #f44336;
+
+  /* pool chart colors */
+  --color-pool-1: #2196f3;
+  --color-pool-2: #4caf50;
+  --color-pool-3: #ff9800;
+  --color-pool-4: #e91e63;
+  --color-pool-5: #9c27b0;
+  --color-pool-6: #00bcd4;
+
+  /* spacing */
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 15px;
+  --spacing-lg: 20px;
+  --spacing-xl: 30px;
+
+  /* layout */
+  --max-width: 1400px;
+  --border-radius: 8px;
+
+  /* fonts */
+  --body-font-family: -apple-system, blickmacystemfont, "Segoe UI", roboto, sans-serif;
+  --heading-font-family: var(--body-font-family);
+  --fixed-font-family: "Roboto Mono", menlo, consolas, monospace;
+
+  /* body sizes */
+  --body-font-size-m: 16px;
+  --body-font-size-s: 14px;
+  --body-font-size-xs: 12px;
+
+  /* heading sizes */
+  --heading-font-size-xxl: 36px;
+  --heading-font-size-xl: 28px;
+  --heading-font-size-l: 24px;
+  --heading-font-size-m: 20px;
+  --heading-font-size-s: 16px;
+  --heading-font-size-xs: 14px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  display: none;
+}
+
+body.appear {
+  display: block;
+}
+
+header {
+  height: 64px;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  scroll-margin: calc(64px + 1em);
+}
+
+h1 { font-size: var(--heading-font-size-xxl); }
+h2 { font-size: var(--heading-font-size-xl); }
+h3 { font-size: var(--heading-font-size-l); }
+h4 { font-size: var(--heading-font-size-m); }
+h5 { font-size: var(--heading-font-size-s); }
+h6 { font-size: var(--heading-font-size-xs); }
+
+p,
+dl,
+ol,
+ul,
+pre,
+blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+code,
+pre {
+  font-family: var(--fixed-font-family);
+  font-size: var(--body-font-size-s);
+}
+
+pre {
+  overflow: scroll;
+}
+
+main pre {
+  background-color: var(--color-text);
+  padding: 1em;
+  border-radius: 0.25em;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+/* links */
+a:any-link {
+  color: var(--color-brand);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--color-brand-dark);
+}
+
+/* buttons */
+a.button:any-link,
+button {
+  font-family: var(--body-font-family);
+  display: inline-block;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: 2px solid transparent;
+  padding: 8px 24px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--color-white);
+  background-color: var(--color-brand);
+  margin: 16px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: var(--border-radius);
+  font-size: var(--body-font-size-s);
+}
+
+a.button:hover,
+a.button:focus,
+button:hover,
+button:focus {
+  background-color: var(--color-brand-dark);
+  cursor: pointer;
+}
+
+button:disabled,
+button:disabled:hover {
+  background-color: var(--color-border-medium);
+  cursor: unset;
+}
+
+a.button.secondary,
+button.secondary {
+  background-color: transparent;
+  border: 2px solid currentcolor;
+  color: var(--color-text);
+}
+
+main img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.icon {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+}
+
+.icon img {
+  height: 100%;
+  width: 100%;
+}
+
+/* sections */
+main .section {
+  padding: var(--spacing-lg) 0;
+}
+
+@media (min-width: 600px) {
+  main .section {
+    padding: var(--spacing-xl) 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .section > div {
+    max-width: var(--max-width);
+    margin: auto;
+  }
+}
